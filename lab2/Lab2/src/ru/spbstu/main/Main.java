@@ -1,16 +1,15 @@
 package ru.spbstu.main;
-import ru.spbstu.main.shapes.PointImpl;
-import ru.spbstu.main.shapes.Rectangle;
-import ru.spbstu.main.shapes.Shape;
-import ru.spbstu.main.shapes.Triangle;
+import ru.spbstu.main.shapes.*;
 
 public class Main {
     public static void main(String[] args) {
-        Shape[] shapes = new Shape[2];
-        shapes[0] = new Triangle(new PointImpl(1,1), new PointImpl(2,2), new PointImpl(1,3));
-        shapes[1] = new Rectangle(new PointImpl(1,1), new PointImpl(1,2), new PointImpl(2,2), new PointImpl(2,1));
+        Shape[] shapes = new Shape[3];
+        shapes[0] = new Triangle(new PointImpl(1,1), new PointImpl(8,8), new PointImpl(16,1));
+        shapes[1] = new Rectangle(new PointImpl(1,1), new PointImpl(1,8), new PointImpl(8,8), new PointImpl(8,1));
+        shapes[2] = new Circle(2);
         System.out.println(shapes[0].getArea());
         System.out.println(shapes[1].getArea());
+        System.out.println(shapes[2].getArea());
         System.out.println(getMaxArea(shapes).getArea());
         /*
          * TODO: Выполнить действия над массивом 'shapes'

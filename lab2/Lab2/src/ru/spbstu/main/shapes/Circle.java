@@ -11,7 +11,7 @@ package ru.spbstu.main.shapes;
 public class Circle implements Shape{
 
     private float r;
-    Circle(float r)
+    public Circle(float r)
     {
         this.r = r;
     }
