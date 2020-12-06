@@ -1,12 +1,14 @@
 package ru.spbstu.main;
 import ru.spbstu.main.shapes.PointImpl;
+import ru.spbstu.main.shapes.Rectangle;
 import ru.spbstu.main.shapes.Shape;
 import ru.spbstu.main.shapes.Triangle;
 
 public class Main {
     public static void main(String[] args) {
         Shape[] shapes = new Shape[10];
-        shapes[0] = new Triangle(new PointImpl(1,2),new PointImpl(1,2), new PointImpl(1,2));
+        shapes[0] = new Triangle(new PointImpl(1,2), new PointImpl(1,2), new PointImpl(1,2));
+        shapes[1] = new Rectangle(new PointImpl(1,2), new PointImpl(1,2), new PointImpl(1,2), new PointImpl(1,2));
 
         /*
          * TODO: Выполнить действия над массивом 'shapes'

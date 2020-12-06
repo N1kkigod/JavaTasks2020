@@ -1,6 +1,6 @@
 package ru.spbstu.main.shapes;
 
-public class Vector {
+public class Vector{
     private Point p1;
     private Point p2;
 
