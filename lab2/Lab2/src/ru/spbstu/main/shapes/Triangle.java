@@ -25,20 +25,34 @@ public class Triangle implements Shape, Polygon{
         this.p3 = p3;
     }
 
+    //Площадь
     @Override
     public float getArea() {
-        return 0;
+        float p = getPerimeter()/2;
+        return (float)Math.sqrt(p*(p - getLength(p1,p2))*(p - getLength(p1,p3))*(p - getLength(p2,p3)));
     }
-
+    //Угол поворота
     @Override
     public int getRotation() {
         return 0;
     }
-
+    //Периметр
     @Override
     public float getPerimeter() {
-        return 0;
+        return getLength(p1,p2) + getLength(p1,p3) + getLength(p2,p3);
     }
+
+    public float getLength(Point p1, Point p2) //Нахождение длины вектора по двум точкам
+    {
+        float maxx = Math.max(p1.getX(),p2.getX());
+        float minx = Math.min(p1.getX(),p2.getX());
+        float maxy = Math.max(p1.getY(),p2.getY());
+        float miny = Math.min(p1.getY(),p2.getY());
+        float v12x = maxx-minx; //X-координата вектора 1-2
+        float v12y = maxy-miny; //Y-координата вектора 1-2
+        return (float)Math.sqrt(Math.pow(v12x,2)+Math.pow(v12y,2)); //Длина вектора 1-2
+    }
+
 
     /*
      * TODO: Реализовать класс 'Triangle'
